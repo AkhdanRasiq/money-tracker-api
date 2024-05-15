@@ -21,7 +21,7 @@ router.get("/dashboard", (req, res) => {
     const query = "select (select count(*) from records where month(records.date) = month(now()) AND year(records.date) = year(now())) as month_records, (select sum(amount) from records) as total_amount;"
     connection.query(query, (err, rows, field) => {
         if(err) {
-            console.log(err.sqlMessage)
+            console.log(err)
             res.status(500).send({message: err.sqlMessage})
         } else {
             res.json(rows)
