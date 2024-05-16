@@ -11,7 +11,7 @@ const multer = Multer({
 
 // TODO: Sesuaikan konfigurasi database
 const connection = mysql.createConnection({
-    host: '10.93.192.3',
+    host: '34.128.97.161',
     user: 'root',
     database: 'moneytracking',
     password: 'admin123'
